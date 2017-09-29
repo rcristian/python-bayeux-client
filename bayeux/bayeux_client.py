@@ -99,7 +99,7 @@ class BayeuxClient(object):
                     thread = Thread(name='BayeuxClient-Thread',
                         target=reactor.run,
                         args=(False,))
-                    thread.daemon = True
+                    thread.daemon = False
                     thread.start()
                 self.sender.handshake(self._handshake_error)
             #else:
